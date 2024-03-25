@@ -1,0 +1,16 @@
+﻿<prism:PrismApplication x:Class="Base.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Base.UI"
+             xmlns:prism="http://prismlibrary.com/">
+    <Application.Resources>
+        <ResourceDictionary>
+            <FontFamily x:Key="Iconfont">pack://application:,,,/GJJ.Assets;component/Fonts/#iconfont</FontFamily>
+            <FontFamily x:Key="DigitalDisplay">pack://application:,,,;component/GJJ.Assets/Fonts/#Digital Display</FontFamily>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/GJJ.Assets;component/Styles/ButtonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</prism:PrismApplication>

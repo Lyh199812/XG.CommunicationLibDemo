@@ -1,0 +1,9 @@
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\bin\Debug\Base.WPF.MultiTHMonitorHelper.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\bin\Debug\Base.WPF.MultiTHMonitorHelper.pdb
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\obj\Debug\Base.Helper.csproj.AssemblyReference.cache
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\obj\Debug\Base.Helper.csproj.CoreCompileInputs.cache
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\obj\Debug\Base.Hel.CF3B4CE0.Up2Date
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\obj\Debug\Base.WPF.MultiTHMonitorHelper.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.WPF.MultiTHMonitorHelper\obj\Debug\Base.WPF.MultiTHMonitorHelper.pdb

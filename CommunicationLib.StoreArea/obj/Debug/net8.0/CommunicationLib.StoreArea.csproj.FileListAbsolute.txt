@@ -1,0 +1,11 @@
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\bin\Debug\net8.0\CommunicationLib.StoreArea.deps.json
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\bin\Debug\net8.0\CommunicationLib.StoreArea.dll
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\bin\Debug\net8.0\CommunicationLib.StoreArea.pdb
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\obj\Debug\net8.0\CommunicationLib.StoreArea.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\obj\Debug\net8.0\CommunicationLib.StoreArea.AssemblyInfoInputs.cache
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\obj\Debug\net8.0\CommunicationLib.StoreArea.AssemblyInfo.cs
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\obj\Debug\net8.0\CommunicationLib.StoreArea.csproj.CoreCompileInputs.cache
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\obj\Debug\net8.0\CommunicationLib.StoreArea.dll
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\obj\Debug\net8.0\refint\CommunicationLib.StoreArea.dll
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\obj\Debug\net8.0\CommunicationLib.StoreArea.pdb
+C:\Users\LYH\Desktop\SoftLibs\DM.EngravePrintSuite\CommunicationLib.StoreArea\obj\Debug\net8.0\ref\CommunicationLib.StoreArea.dll

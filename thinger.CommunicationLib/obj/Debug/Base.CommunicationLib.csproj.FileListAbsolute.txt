@@ -1,0 +1,10 @@
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\thinger.CommunicationLib.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\thinger.CommunicationLib.pdb
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\Base.DataConvertLib.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\thinger.S7NetEx.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\Base.DataConvertLib.pdb
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\Base.CommunicationLib.csproj.AssemblyReference.cache
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\Base.CommunicationLib.csproj.CoreCompileInputs.cache
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\Base.Com.ABD74C50.Up2Date
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\thinger.CommunicationLib.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\thinger.CommunicationLib.pdb

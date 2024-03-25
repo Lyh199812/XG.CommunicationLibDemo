@@ -1,0 +1,1740 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>thinger.DataConvertLib</name>
+    </assembly>
+    <members>
+        <member name="T:thinger.DataConvertLib.BitLib">
+            <summary>
+            Bit转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitFromByte(System.Byte,System.Int32)">
+            <summary>
+            返回某个字节的指定位
+            </summary>
+            <param name="value">字节</param>
+            <param name="offset">偏移位</param>
+            <remarks>偏移位0-7有效，否则结果不正确</remarks>
+            <returns>布尔结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitFrom2Bytes(System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            获取字节数组(长度为2)中的指定位
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="offset">偏移位</param>
+            <param name="isLittleEndian">大小端</param>
+            <remarks>偏移位0-15有效，否则结果不正确</remarks>
+            <returns>布尔结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitFrom2Bytes(System.Byte,System.Byte,System.Int32)">
+            <summary>
+            获取高低字节的指定位
+            </summary>
+            <param name="high">高位字节</param>
+            <param name="low">低位字节</param>
+            <param name="offset">偏移位</param>
+            <remarks>偏移位0-15有效，否则结果不正确</remarks>
+            <returns>布尔结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitFromByteArray(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            返回字节数组中某个字节的指定位
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">字节索引</param>
+            <param name="offset">偏移位</param>
+            <remarks>偏移位0-7有效，否则结果不正确</remarks> 
+            <returns>布尔结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitFrom2BytesArray(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            返回字节数组中某2个字节的指定位
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">字节索引</param>
+            <param name="offset">偏移位</param>
+            <param name="isLittleEndian">大小端</param>
+            <remarks>偏移位0-15有效，否则结果不正确</remarks> 
+            <returns>布尔结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitFromShort(System.Int16,System.Int32,System.Boolean)">
+            <summary>
+            根据一个Short返回指定位
+            </summary>
+            <param name="value">short数值</param>
+            <param name="offset">偏移位</param>
+            <param name="isLittleEndian">大小端</param>
+            <remarks>偏移位0-15有效，否则结果不正确</remarks>
+            <returns>布尔结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitFromUShort(System.UInt16,System.Int32,System.Boolean)">
+            <summary>
+            根据一个UShort返回指定位
+            </summary>
+            <param name="value">short数值</param>
+            <param name="offset">偏移位</param>
+            <param name="isLittleEndian">大小端</param>
+            <remarks>偏移位0-15有效，否则结果不正确</remarks>
+            <returns>布尔结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitArrayFromByteArray(System.Byte[],System.Int32)">
+            <summary>
+            将字节数组转换成布尔数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="length">布尔数组长度</param>
+            <returns>布尔数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitArrayFromByteArray(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            将字节数组转换成布尔数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="length">布尔数组长度</param>
+            <returns>布尔数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitArrayFromByteArray(System.Byte[])">
+            <summary>
+            将字节数组转换成布尔数组
+            </summary>
+            <param name="value">字节数组</param>
+            <returns>布尔数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitArrayFromByte(System.Byte)">
+            <summary>
+            将一个字节转换成布尔数组
+            </summary>
+            <param name="value">字节</param>
+            <returns>布尔数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitArrayFromBitArray(System.Boolean[],System.Int32,System.Int32)">
+            <summary>
+            根据位开始和长度截取布尔数组
+            </summary>
+            <param name="value">布尔数组</param>
+            <param name="start">开始索引</param>
+            <param name="length">长度</param>
+            <returns>返回布尔数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.GetBitArrayFromBitArrayString(System.String,System.String)">
+            <summary>
+            将字符串按照指定的分隔符转换成布尔数组
+            </summary>
+            <param name="value">待转换字符串</param>
+            <param name="spilt">分割符</param>
+            <returns>返回布尔数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.BitLib.IsBoolean(System.String)">
+            <summary>
+            是否为布尔
+            </summary>
+            <param name="value">布尔字符串</param>
+            <returns>布尔结果</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.ByteArray">
+            <summary>
+            字节集合类
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.ByteArray.Item(System.Int32)">
+            <summary>
+            通过索引获取值
+            </summary>
+            <param name="index">索引</param>
+            <returns>返回字节</returns>
+        </member>
+        <member name="P:thinger.DataConvertLib.ByteArray.Length">
+            <summary>
+            返回长度
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.ByteArray.array">
+            <summary>
+            属性，返回字节数组
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Clear">
+            <summary>
+            清空字节数组
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(System.Byte)">
+            <summary>
+            添加一个字节
+            </summary>
+            <param name="item">字节</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(System.Byte[])">
+            <summary>
+            添加一个字节数组
+            </summary>
+            <param name="items">字节数组</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(System.Byte,System.Byte)">
+            <summary>
+            添加二个字节
+            </summary>
+            <param name="item1">字节1</param>
+            <param name="item2">字节2</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            添加三个字节
+            </summary>
+            <param name="item1">字节1</param>
+            <param name="item2">字节2</param>
+            <param name="item3">字节3</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            添加四个字节
+            </summary>
+            <param name="item1">字节1</param>
+            <param name="item2">字节2</param>
+            <param name="item3">字节3</param>
+            <param name="item4">字节4</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            添加五个字节
+            </summary>
+            <param name="item1">字节1</param>
+            <param name="item2">字节2</param>
+            <param name="item3">字节3</param>
+            <param name="item4">字节4</param>
+            <param name="item5">字节5</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(thinger.DataConvertLib.ByteArray)">
+            <summary>
+            添加一个ByteArray对象
+            </summary>
+            <param name="byteArray">ByteArray对象</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(System.UInt16)">
+            <summary>
+            添加一个ushort类型数值
+            </summary>
+            <param name="value">ushort类型数值</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArray.Add(System.Int16)">
+            <summary>
+            添加一个short类型数值
+            </summary>
+            <param name="value">short类型数值</param>
+        </member>
+        <member name="T:thinger.DataConvertLib.ByteArrayLib">
+            <summary>
+            字节数组转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromByteArray(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            自定义截取字节数组
+            </summary>
+            <param name="data">字节数组</param>
+            <param name="start">开始字节</param>
+            <param name="length">截取长度</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromByteArray(System.Byte[],System.Int32)">
+            <summary>
+            自定义截取字节数组
+            </summary>
+            <param name="data">字节数组</param>
+            <param name="start">开始字节</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.Get2BytesFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            从字节数组中截取2个字节,并按指定字节序返回
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">字节顺序，默认为ABCD</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.Get4BytesFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            从字节数组中截取4个字节,并按指定字节序返回
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">字节顺序，默认为ABCD</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.Get8BytesFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            从字节数组中截取8个字节,并按指定字节序返回
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">字节顺序，默认为ABCD</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayEquals(System.Byte[],System.Byte[])">
+            <summary>
+            比较两个字节数组是否完全相同
+            </summary>
+            <param name="value1">字节数组1</param>
+            <param name="value2">字节数组2</param>
+            <returns>是否相同</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromByte(System.Byte)">
+            <summary>
+            将单个字节转换成字节数组
+            </summary>
+            <param name="value">单个字节</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromShort(System.Int16,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Short类型数值转换成字节数组
+            </summary>
+            <param name="value">Short类型数值</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromUShort(System.UInt16,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将UShort类型数值转换成字节数组
+            </summary>
+            <param name="value">UShort类型数值</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromInt(System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Int类型数值转换成字节数组
+            </summary>
+            <param name="value">Int类型数值</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromUInt(System.UInt32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将UInt类型数值转换成字节数组
+            </summary>
+            <param name="value">UInt类型数值</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromFloat(System.Single,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Float数值转换成字节数组
+            </summary>
+            <param name="value">Float类型数值</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromDouble(System.Double,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Double类型数值转换成字节数组
+            </summary>
+            <param name="value">Double类型数值</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromLong(System.Int64,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Long类型数值转换成字节数组
+            </summary>
+            <param name="value">Long类型数值</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromULong(System.UInt64,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将ULong类型数值转换成字节数组
+            </summary>
+            <param name="value">ULong类型数值</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromShortArray(System.Int16[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Short数组转换成字节数组
+            </summary>
+            <param name="value">Short数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromUShortArray(System.UInt16[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将UShort数组转换成字节数组
+            </summary>
+            <param name="value">UShort数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromIntArray(System.Int32[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Int类型数组转换成字节数组
+            </summary>
+            <param name="value">Int类型数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromUIntArray(System.UInt32[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将UInt类型数组转换成字节数组
+            </summary>
+            <param name="value">UInt类型数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromFloatArray(System.Single[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Float类型数组转成字节数组
+            </summary>
+            <param name="value">Float类型数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromDoubleArray(System.Double[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Double类型数组转成字节数组
+            </summary>
+            <param name="value">Double类型数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromLongArray(System.Int64[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将Long类型数组转换成字节数组
+            </summary>
+            <param name="value">Long类型数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromULongArray(System.UInt64[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将ULong类型数组转换成字节数组
+            </summary>
+            <param name="value">ULong类型数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromString(System.String,System.Text.Encoding)">
+            <summary>
+            将指定编码格式的字符串转换成字节数组
+            </summary>
+            <param name="value">字符串</param>
+            <param name="encoding">编码格式</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromHexString(System.String,System.String)">
+            <summary>
+            将16进制字符串按照空格分隔成字节数组
+            </summary>
+            <param name="value">16进制字符串</param>
+            <param name="spilt">分隔符</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromHexStringWithoutSpilt(System.String)">
+            <summary>
+            将16进制字符串不用分隔符转换成字节数组（每2个字符为1个字节）
+            </summary>
+            <param name="value">16进制字符串</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetAsciiByteArrayFromValue(System.Byte)">
+            <summary>
+            将byte数据转换成一个Asii格式字节数组
+            </summary>
+            <param name="value">byte数据</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetAsciiByteArrayFromValue(System.Int16)">
+            <summary>
+            将short数据转换成一个Asii格式字节数组
+            </summary>
+            <param name="value">short数据</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetAsciiByteArrayFromValue(System.UInt16)">
+            <summary>
+            将ushort数据转换成一个Asii格式字节数组
+            </summary>
+            <param name="value">ushort数据</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetAsciiByteArrayFromValue(System.String)">
+            <summary>
+            将string数据转换成一个Asii格式字节数组
+            </summary>
+            <param name="value">string数据</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromBoolArray(System.Boolean[])">
+            <summary>
+            将布尔数组转换成字节数组
+            </summary>
+            <param name="data">布尔数组</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromSiemensString(System.String)">
+            <summary>
+            将西门子字符串转换成字节数组
+            </summary>
+            <param name="value">西门子字符串</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromOmronCIPString(System.String)">
+            <summary>
+            将欧姆龙CIP字符串转换成字节数组
+            </summary>
+            <param name="data">西门子字符串</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetEvenByteArray(System.Byte[])">
+            <summary>
+            扩展为偶数长度字节数组
+            </summary>
+            <param name="data">原始字节数据</param>
+            <returns>返回字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetFixedLengthByteArray(System.Byte[],System.Int32)">
+            <summary>
+            扩展或压缩字节数组到指定数量
+            </summary>
+            <param name="data">原始字节数据</param>
+            <param name="length">指定长度</param>
+            <returns>返回字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetAsciiBytesFromByteArray(System.Byte[],System.String)">
+            <summary>
+            将字节数组转换成ASCII字节数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="segment">分隔符</param>
+            <returns>ASCII字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetBytesArrayFromAsciiByteArray(System.Byte[])">
+            <summary>
+            将ASCII字节数组转换成字节数组
+            </summary>
+            <param name="value">ASCII字节数组</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromTwoByteArray(System.Byte[],System.Byte[])">
+            <summary>
+            将2个字节数组进行合并
+            </summary>
+            <param name="bytes1">字节数组1</param>
+            <param name="bytes2">字节数组2</param>
+            <returns>返回字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.GetByteArrayFromThreeByteArray(System.Byte[],System.Byte[],System.Byte[])">
+            <summary>
+            将3个字节数组进行合并
+            </summary>
+            <param name="bytes1">字节数组1</param>
+            <param name="bytes2">字节数组2</param>
+            <param name="bytes3">字节数组3</param>
+            <returns>返回字节数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteArrayLib.SetByteArray(System.Byte[],System.Object,System.Int32,System.Int32)">
+            <summary>
+            将字节数组中的某个数据修改
+            </summary>
+            <param name="sourceArray">字节数组</param>
+            <param name="value">数据，确定好类型</param>
+            <param name="start">开始索引</param>
+            <param name="offset">偏移，布尔及字符串才起作用</param>
+            <returns>返回字节数组</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.ByteLib">
+            <summary>
+            Byte转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteLib.SetbitValue(System.Byte,System.Int32,System.Boolean)">
+            <summary>
+            将字节中的某个位赋值
+            </summary>
+            <param name="value">原始字节</param>
+            <param name="offset">位</param>
+            <param name="bitValue">写入数值</param>
+            <returns>返回字节</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteLib.GetByteFromByteArray(System.Byte[],System.Int32)">
+            <summary>
+            从字节数组中截取某个字节
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <returns>返回字节</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ByteLib.GetByteFromBoolArray(System.Boolean[])">
+            <summary>
+            将布尔数组转换成字节数组
+            </summary>
+            <param name="value">布尔数组</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.DoubleLib">
+            <summary>
+            Double转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.DoubleLib.GetDoubleFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组中某8个字节转换成Double类型
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始位置</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>Double类型数值</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.DoubleLib.GetDoubleArrayFromByteArray(System.Byte[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组转换成Double数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="dataFormat">字节顺序</param>
+            <returns>Double数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.DoubleLib.GetDoubleArrayFromString(System.String,System.String)">
+            <summary>
+            将Double字符串转换成双精度浮点型数组
+            </summary>
+            <param name="value">Double字符串</param>
+            <param name="spilt">分割符</param>
+            <returns>双精度浮点型数组</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.DataFormat">
+            <summary>
+            字节序
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataFormat.ABCD">
+            <summary>
+            按照顺序排序
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataFormat.BADC">
+            <summary>
+            按照单字反转
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataFormat.CDAB">
+            <summary>
+            按照双字反转
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataFormat.DCBA">
+            <summary>
+            按照倒序排序
+            </summary>
+        </member>
+        <member name="T:thinger.DataConvertLib.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.Bool">
+            <summary>
+            布尔
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.Byte">
+            <summary>
+            字节
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.SByte">
+            <summary>
+            字节
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.Short">
+            <summary>
+            有符号16位整型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.UShort">
+            <summary>
+            无符号16位整型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.Int">
+            <summary>
+            有符号32位整型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.UInt">
+            <summary>
+            无符号32位整型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.Float">
+            <summary>
+            32位浮点型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.Double">
+            <summary>
+            64位浮点型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.Long">
+            <summary>
+            有符号64位整型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.ULong">
+            <summary>
+            无符号64位整型
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.String">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.WString">
+            <summary>
+            超文本字符串
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.Struct">
+            <summary>
+            结构体
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.BoolArray">
+            <summary>
+            布尔数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.ByteArray">
+            <summary>
+            字节数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.SByteArray">
+            <summary>
+            字节数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.ShortArray">
+            <summary>
+            有符号16位整型数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.UShortArray">
+            <summary>
+            无符号16位整型数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.IntArray">
+            <summary>
+            有符号32位整型数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.UIntArray">
+            <summary>
+            无符号32位整型数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.FloatArray">
+            <summary>
+            32位浮点数数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.DoubleArray">
+            <summary>
+            64位浮点数数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.LongArray">
+            <summary>
+            64位有符号整型数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.ULongArray">
+            <summary>
+            64位无符号整型数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.StringArray">
+            <summary>
+            字符串数组
+            </summary>
+        </member>
+        <member name="F:thinger.DataConvertLib.DataType.WStringArray">
+            <summary>
+            超文本字符串数组
+            </summary>
+        </member>
+        <member name="T:thinger.DataConvertLib.FloatLib">
+            <summary>
+            Float转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.FloatLib.GetFloatFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组中某4个字节转换成Float类型
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回一个浮点数</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.FloatLib.GetFloatArrayFromByteArray(System.Byte[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组转换成Float数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回浮点数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.FloatLib.GetFloatArrayFromString(System.String,System.String)">
+            <summary>
+            将Float字符串转换成单精度浮点型数组
+            </summary>
+            <param name="value">Float字符串</param>
+            <param name="spilt">分隔符</param>
+            <returns>单精度浮点型数组</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.IntLib">
+            <summary>
+            Int转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.IntLib.GetIntFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            字节数组中截取转成32位整型
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回int类型</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.IntLib.GetIntArrayFromByteArray(System.Byte[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组中截取转成32位整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回int数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.IntLib.GetIntArrayFromString(System.String,System.String)">
+            <summary>
+            将字符串转转成32位整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="spilt">分隔符</param>
+            <returns>返回int数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.IntLib.GetByteLengthFromBoolLength(System.Int32)">
+            <summary>
+            通过布尔长度取整数
+            </summary>
+            <param name="boolLength">布尔长度</param>
+            <returns>整数</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.MigrationLib">
+            <summary>
+            数值转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.MigrationLib.GetMigrationValue(System.Object,System.String,System.String)">
+            <summary>
+            获取转换结果
+            </summary>
+            <param name="value">原始值</param>
+            <param name="scale">线性系数</param>
+            <param name="offset">线性偏移</param>
+            <returns>带操作结果的转换结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.MigrationLib.SetMigrationValue(System.String,thinger.DataConvertLib.DataType,System.String,System.String)">
+            <summary>
+            线性转换后的设定值
+            </summary>
+            <param name="set">设定值</param>
+            <param name="type">数据类型</param>
+            <param name="scale">线性系数</param>
+            <param name="offset">线性偏移</param>
+            <returns>带操作结果的转换结果</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.StringLib">
+            <summary>
+            字符串转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetStringFromByteArrayByBitConvert(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            将字节数组转换成字符串
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="count">数量</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetStringFromByteArrayByBitConvert(System.Byte[])">
+            <summary>
+            将字节数组转换成字符串
+            </summary>
+            <param name="value">字节数组</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetStringFromByteArrayByEncoding(System.Byte[],System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+            将字节数组转换成带编码格式字符串
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="count">数量</param>
+            <param name="encoding">编码格式</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetStringFromByteArrayByEncoding(System.Byte[],System.Text.Encoding)">
+            <summary>
+            将字节数组转换成带编码格式字符串
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="encoding">编码格式</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetHexStringFromByteArray(System.Byte[],System.Int32,System.Int32,System.String)">
+            <summary>
+            将字节数组转换成带16进制字符串
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="count">数量</param>
+            <param name="segment">连接符</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetHexStringFromByteArray(System.Byte[],System.String)">
+            <summary>
+            将字节数组转换成带16进制字符串
+            </summary>
+            <param name="source">字节数组</param>
+            <param name="segment">连接符</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetSiemensStringFromByteArray(System.Byte[],System.Int32,System.Int32,System.String)">
+            <summary>
+            将字节数组转换成西门子字符串
+            </summary>
+            <param name="source">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="length">长度</param>
+            <param name="emptyStr">如果为空，显示什么内容</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetStringFromValueArray``1(``0[],System.Int32,System.Int32,System.String)">
+            <summary>
+            各种类型数组转换成字符串
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="value">数组</param>
+            <param name="start">开始索引</param>
+            <param name="length">长度</param>
+            <param name="segment">连接符</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.StringLib.GetStringFromValueArray``1(``0[],System.String)">
+            <summary>
+            各种类型数组转换成字符串
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="value">数组</param>
+            <param name="segment">连接符</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.OperateResult">
+            <summary>
+            操作结果类
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult.IsSuccess">
+            <summary>
+            结果是否成功
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult.Message">
+            <summary>
+            错误描述
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult.ErrorCode">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.#ctor(System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">操作是否成功</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.#ctor(System.Boolean,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">操作是否成功</param>
+            <param name="message">结果信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.#ctor(System.Boolean,System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">操作是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">结果信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">结果信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.#ctor(System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="errorCode">错误代码</param>
+            <param name="message">结果信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateSuccessResult">
+            <summary>
+            创建一个操作成功结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult(System.String)">
+            <summary>
+            创建一个操作失败结果，带结果信息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult">
+            <summary>
+            创建一个操作失败结果，不带结果信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CopyOperateResult``2(thinger.DataConvertLib.OperateResult{``1})">
+            <summary>
+            复制带一个数据的操作结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <param name="result">操作结果对象</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateSuccessResult``1(``0)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="value">值</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``1(thinger.DataConvertLib.OperateResult)">
+            <summary>
+            创建带一个数据的操作失败结果
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="result">操作结果对象</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``1(System.String)">
+            <summary>
+            创建带一个数据的操作失败结果
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="message">错误信息</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateSuccessResult``2(``0,``1)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <param name="value1">值1</param>
+            <param name="value2">值2</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``2(thinger.DataConvertLib.OperateResult)">
+            <summary>
+            创建带一个数据的操作失败结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <param name="result">操作结果</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``2(System.String)">
+            <summary>
+            创建带一个数据的操作失败结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <param name="message">错误信息</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateSuccessResult``3(``0,``1,``2)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <param name="value1">值1</param>
+            <param name="value2">值2</param>
+            <param name="value3">值3</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``3(thinger.DataConvertLib.OperateResult)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <param name="result">操作结果</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``3(System.String)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <param name="message">错误信息</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateSuccessResult``4(``0,``1,``2,``3)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <typeparam name="T4">类型4</typeparam>
+            <param name="value1">值1</param>
+            <param name="value2">值2</param>
+            <param name="value3">值3</param>
+            <param name="value4">值4</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``4(thinger.DataConvertLib.OperateResult)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <typeparam name="T4">类型4</typeparam>
+            <param name="result">操作结果</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``4(System.String)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <typeparam name="T4">类型4</typeparam>
+            <param name="message">错误信息</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateSuccessResult``5(``0,``1,``2,``3,``4)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <typeparam name="T4">类型4</typeparam>
+            <typeparam name="T5">类型5</typeparam>
+            <param name="value1">值1</param>
+            <param name="value2">值2</param>
+            <param name="value3">值3</param>
+            <param name="value4">值4</param>
+            <param name="value5">值5</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``5(thinger.DataConvertLib.OperateResult)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <typeparam name="T4">类型4</typeparam>
+            <typeparam name="T5">类型5</typeparam>
+            <param name="result">操作结果</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult.CreateFailResult``5(System.String)">
+            <summary>
+            创建带一个数据的操作成功结果
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <typeparam name="T4">类型4</typeparam>
+            <typeparam name="T5">类型5</typeparam>
+            <param name="message">错误信息</param>
+            <returns>带一个数据的操作结果</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.OperateResult`1">
+            <summary>
+            带一个数据的操作结果类
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`1.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`1.#ctor(System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">操作是否成功</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`1.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`1.#ctor(System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`1.#ctor(System.Boolean,System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`1.#ctor(System.Boolean,System.Int32,System.String,`0)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+            <param name="content">数据</param>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`1.Content">
+            <summary>
+             数据
+            </summary>
+        </member>
+        <member name="T:thinger.DataConvertLib.OperateResult`2">
+            <summary>
+            带二个数据的操作结果类
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`2.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`2.#ctor(System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">操作是否成功</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`2.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`2.#ctor(System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`2.#ctor(System.Boolean,System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`2.#ctor(System.Boolean,System.Int32,System.String,`0,`1)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+            <param name="content1">数据1</param>
+            <param name="content2">数据2</param>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`2.Content1">
+            <summary>
+            数据1
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`2.Content2">
+            <summary>
+            数据2
+            </summary>
+        </member>
+        <member name="T:thinger.DataConvertLib.OperateResult`3">
+            <summary>
+            带三个数据的操作结果类
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`3.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`3.#ctor(System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">操作是否成功</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`3.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`3.#ctor(System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`3.#ctor(System.Boolean,System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`3.#ctor(System.Boolean,System.Int32,System.String,`0,`1,`2)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+            <param name="content1">数据1</param>
+            <param name="content2">数据2</param>
+            <param name="content3">数据3</param>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`3.Content1">
+            <summary>
+            数据1
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`3.Content2">
+            <summary>
+            数据2
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`3.Content3">
+            <summary>
+            数据3
+            </summary>
+        </member>
+        <member name="T:thinger.DataConvertLib.OperateResult`4">
+            <summary>
+            带四个数据的操作结果类
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <typeparam name="T4">类型4</typeparam>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`4.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`4.#ctor(System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">操作是否成功</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`4.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`4.#ctor(System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`4.#ctor(System.Boolean,System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`4.#ctor(System.Boolean,System.Int32,System.String,`0,`1,`2,`3)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+            <param name="content1">数据1</param>
+            <param name="content2">数据2</param>
+            <param name="content3">数据3</param>
+            <param name="content4">数据4</param>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`4.Content1">
+            <summary>
+            数据1
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`4.Content2">
+            <summary>
+            数据2
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`4.Content3">
+            <summary>
+            数据3
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`4.Content4">
+            <summary>
+            数据4
+            </summary>
+        </member>
+        <member name="T:thinger.DataConvertLib.OperateResult`5">
+            <summary>
+            带五个数据的操作结果类
+            </summary>
+            <typeparam name="T1">类型1</typeparam>
+            <typeparam name="T2">类型2</typeparam>
+            <typeparam name="T3">类型3</typeparam>
+            <typeparam name="T4">类型4</typeparam>
+            <typeparam name="T5">类型5</typeparam>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`5.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`5.#ctor(System.Boolean)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">操作是否成功</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`5.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`5.#ctor(System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`5.#ctor(System.Boolean,System.Int32,System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:thinger.DataConvertLib.OperateResult`5.#ctor(System.Boolean,System.Int32,System.String,`0,`1,`2,`3,`4)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="isSuccess">是否成功</param>
+            <param name="errorCode">错误代码</param>
+            <param name="message">错误信息</param>
+            <param name="content1">数据1</param>
+            <param name="content2">数据2</param>
+            <param name="content3">数据3</param>
+            <param name="content4">数据4</param>
+            <param name="content5">数据5</param>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`5.Content1">
+            <summary>
+            数据1
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`5.Content2">
+            <summary>
+            数据2
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`5.Content3">
+            <summary>
+            数据3
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`5.Content4">
+            <summary>
+            数据4
+            </summary>
+        </member>
+        <member name="P:thinger.DataConvertLib.OperateResult`5.Content5">
+            <summary>
+            数据5
+            </summary>
+        </member>
+        <member name="T:thinger.DataConvertLib.ULongLib">
+            <summary>
+            ULong转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.ULongLib.GetULongFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            字节数组中截取转成64位无符号整型
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回一个ULong类型</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ULongLib.GetULongArrayFromByteArray(System.Byte[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组中截取转成64位无符号整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回Long数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ULongLib.GetULongArrayFromString(System.String,System.String)">
+            <summary>
+            将字符串转转成64位无符号整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="spilt">分隔符</param>
+            <returns>返回ULong数组</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.LongLib">
+            <summary>
+            Long转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.LongLib.GetLongFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            字节数组中截取转成64位整型
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回一个Long类型</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.LongLib.GetLongArrayFromByteArray(System.Byte[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组中截取转成64位整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回Long数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.LongLib.GetLongArrayFromString(System.String,System.String)">
+            <summary>
+            将字符串转转成64位整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="spilt">分隔符</param>
+            <returns>返回Long数组</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.ShortLib">
+            <summary>
+            Short转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.ShortLib.GetShortFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            字节数组中截取转成16位整型
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回Short结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ShortLib.GetShortArrayFromByteArray(System.Byte[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组中截取转成16位整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="type">数据格式</param>
+            <returns>返回Short数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ShortLib.GetShortArrayFromString(System.String,System.String)">
+            <summary>
+            将字符串转转成16位整型数组
+            </summary>
+            <param name="value">带转换字符串</param>
+            <param name="spilt">分割符</param>
+            <returns>返回Short数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ShortLib.SetBitValueFrom2ByteArray(System.Byte[],System.Int32,System.Boolean,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            设置字节数组某个位
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="offset">某个位</param>
+            <param name="bitVal">True或者False</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回short结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ShortLib.SetBitValueFromShort(System.Int16,System.Int32,System.Boolean,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            设置16位整型某个位
+            </summary>
+            <param name="value">Short数据</param>
+            <param name="offset">某个位</param>
+            <param name="bitVal">True或者False</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回Short结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.ShortLib.GetByteLengthFromBoolLength(System.Int32)">
+            <summary>
+            通过布尔长度取整数
+            </summary>
+            <param name="boolLength">布尔长度</param>
+            <returns>整数</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.UIntLib">
+            <summary>
+            UInt转换类
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.UIntLib.GetUIntFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            字节数组中截取转成32位无符号整型
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回UInt类型</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.UIntLib.GetUIntArrayFromByteArray(System.Byte[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组中截取转成32位无符号整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回int数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.UIntLib.GetUIntArrayFromString(System.String,System.String)">
+            <summary>
+            将字符串转转成32位无符号整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="spilt">分隔符</param>
+            <returns>返回UInt数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.UIntLib.GetByteLengthFromBoolLength(System.Int32)">
+            <summary>
+            通过布尔长度取整数
+            </summary>
+            <param name="boolLength">布尔长度</param>
+            <returns>整数</returns>
+        </member>
+        <member name="T:thinger.DataConvertLib.UShortLib">
+            <summary>
+            UShort类型转换
+            </summary>
+        </member>
+        <member name="M:thinger.DataConvertLib.UShortLib.GetUShortFromByteArray(System.Byte[],System.Int32,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            字节数组中截取转成16位无符号整型
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="start">开始索引</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回UShort结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.UShortLib.GetUShortArrayFromByteArray(System.Byte[],thinger.DataConvertLib.DataFormat)">
+            <summary>
+            将字节数组中截取转成16位无符号整型数组
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="type">数据格式</param>
+            <returns>返回UShort数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.UShortLib.GetUShortArrayFromString(System.String,System.String)">
+            <summary>
+            将字符串转转成16位无符号整型数组
+            </summary>
+            <param name="value">带转换字符串</param>
+            <param name="spilt">分割符</param>
+            <returns>返回Short数组</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.UShortLib.SetBitValueFrom2ByteArray(System.Byte[],System.Int32,System.Boolean,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            设置字节数组某个位
+            </summary>
+            <param name="value">字节数组</param>
+            <param name="offset">偏移位</param>
+            <param name="bitVal">True或者False</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回UShort结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.UShortLib.SetBitValueFromUShort(System.UInt16,System.Int32,System.Boolean,thinger.DataConvertLib.DataFormat)">
+            <summary>
+            设置16位整型某个位
+            </summary>
+            <param name="value">Short数据</param>
+            <param name="offset">偏移位</param>
+            <param name="bitVal">True或者False</param>
+            <param name="dataFormat">数据格式</param>
+            <returns>返回UShort结果</returns>
+        </member>
+        <member name="M:thinger.DataConvertLib.UShortLib.GetByteLengthFromBoolLength(System.Int32)">
+            <summary>
+            通过布尔长度取整数
+            </summary>
+            <param name="boolLength">布尔长度</param>
+            <returns>整数</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\bin\Debug\Base.Common.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\bin\Debug\Base.Common.pdb
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\bin\Debug\Base.DataConvertLib.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\bin\Debug\Base.WPF.MultiTHMonitorHelper.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\bin\Debug\Base.DataConvertLib.pdb
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\bin\Debug\Base.WPF.MultiTHMonitorHelper.pdb
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.csproj.AssemblyReference.cache
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.csproj.CoreCompileInputs.cache
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Com.67B953FF.Up2Date
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.dll
+C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.pdb

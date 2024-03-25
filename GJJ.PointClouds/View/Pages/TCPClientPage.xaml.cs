@@ -1,0 +1,41 @@
+﻿using Base.UI.ViewModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace Base.UI.View.Pages
+{
+    /// <summary>
+    /// TCPClient.xaml 的交互逻辑
+    /// </summary>
+    public partial class TCPClientPage : UserControl
+    {
+        public TCPClientPage()
+        {
+            InitializeComponent();
+            this.DataContext =new TCPClientViewModel();
+    
+        }
+        public TCPClientPage(string IpAddress,string Port,string HostName):base()
+        {
+            InitializeComponent();
+            this.DataContext = new TCPClientViewModel();
+            ((TCPClientViewModel)this.DataContext).ServerIPAddress = IpAddress; 
+            ((TCPClientViewModel)this.DataContext).Port = Port;
+            ((TCPClientViewModel)this.DataContext).ClientName = HostName;
+            ((TCPClientViewModel)this.DataContext).Connect();
+
+        }
+    }
+}

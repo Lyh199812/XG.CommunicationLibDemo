@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CommunicationLib.StoreArea/1.0.0": {
+        "runtime": {
+          "CommunicationLib.StoreArea.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CommunicationLib.StoreArea/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
