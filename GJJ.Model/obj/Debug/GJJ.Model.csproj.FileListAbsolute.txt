@@ -16,3 +16,9 @@ C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.Model\obj\Debug\GJJ.Model.cspro
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.Model\obj\Debug\GJJ.Model.csproj.CoreCompileInputs.cache
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.Model\obj\Debug\GJJ.Model.dll
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.Model\obj\Debug\GJJ.Model.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Model\bin\Debug\GJJ.Model.dll
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Model\bin\Debug\GJJ.Model.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Model\obj\Debug\GJJ.Model.csproj.AssemblyReference.cache
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Model\obj\Debug\GJJ.Model.csproj.CoreCompileInputs.cache
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Model\obj\Debug\GJJ.Model.dll
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Model\obj\Debug\GJJ.Model.pdb

@@ -49,11 +49,13 @@
     <Compile Include="Base\ReadWriteBase.cs" />
     <Compile Include="Base\SerialDeviceBase.cs" />
     <Compile Include="Enum\Enum.cs" />
+    <Compile Include="Helper\MelsecHelper.cs" />
     <Compile Include="Helper\ModbusHelper.cs" />
     <Compile Include="Helper\ParityHelper.cs" />
     <Compile Include="Helper\SiemensHelper.cs" />
     <Compile Include="Interface\IMessage.cs" />
     <Compile Include="Interface\IReadWrite.cs" />
+    <Compile Include="Library\MelsecFxSerial.cs" />
     <Compile Include="Library\ModbusRTUOverTCP.cs" />
     <Compile Include="Message\ModbusRTUOverTCPMessage.cs" />
     <Compile Include="Message\ModbusTCPMessage.cs" />
@@ -63,6 +65,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lock\SimpleHybirdLock.cs" />
     <Compile Include="SiemensS7.cs" />
+    <Compile Include="StoreArea\MelsecA1EStoreArea.cs" />
+    <Compile Include="StoreArea\MelsecStoreArea.cs" />
     <Compile Include="StoreArea\ModbusStoreArea.cs" />
     <Compile Include="StoreArea\SiemensStoreArea.cs" />
   </ItemGroup>

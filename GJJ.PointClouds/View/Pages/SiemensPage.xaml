@@ -10,6 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition  Height="3*"/>
+            <RowDefinition  Height="5*"/>
         </Grid.RowDefinitions>
         <GroupBox Grid.Row="0" Header="通信参数" Margin="5">
             <Grid>

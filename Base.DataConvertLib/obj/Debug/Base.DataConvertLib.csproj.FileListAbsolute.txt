@@ -16,3 +16,9 @@ C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.DataConvertLib\obj\Debug\Base.
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.DataConvertLib\obj\Debug\Base.DataConvertLib.csproj.CoreCompileInputs.cache
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.DataConvertLib\obj\Debug\Base.DataConvertLib.dll
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Base.DataConvertLib\obj\Debug\Base.DataConvertLib.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\Base.DataConvertLib\bin\Debug\Base.DataConvertLib.dll
+E:\SoftLibs\XG.CommunicationLibDemo\Base.DataConvertLib\bin\Debug\Base.DataConvertLib.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\Base.DataConvertLib\obj\Debug\Base.DataConvertLib.csproj.AssemblyReference.cache
+E:\SoftLibs\XG.CommunicationLibDemo\Base.DataConvertLib\obj\Debug\Base.DataConvertLib.csproj.CoreCompileInputs.cache
+E:\SoftLibs\XG.CommunicationLibDemo\Base.DataConvertLib\obj\Debug\Base.DataConvertLib.dll
+E:\SoftLibs\XG.CommunicationLibDemo\Base.DataConvertLib\obj\Debug\Base.DataConvertLib.pdb

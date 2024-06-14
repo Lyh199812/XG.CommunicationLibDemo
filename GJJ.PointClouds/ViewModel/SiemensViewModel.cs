@@ -99,7 +99,7 @@ namespace Base.UI.ViewModel
         {
             if (IsConnected)
             {
-                CommonMethods.AddSysLog($"PLC已连接,请先断开", 1);
+                CommonMethods.AddSysLog(1,$"PLC已连接,请先断开");
                 return;
             }
             device = new SiemensS7();
@@ -113,12 +113,12 @@ namespace Base.UI.ViewModel
             if (result.IsSuccess)
             {
                 IsConnected = true;
-                CommonMethods.AddSysLog("PLC连接成功", 0);
+                CommonMethods.AddSysLog(0,"PLC连接成功");
             }
             else
             {
                 IsConnected = false;
-                CommonMethods.AddSysLog("PLC连接失败：" + result.Message, 0);
+                CommonMethods.AddSysLog(0,"PLC连接失败：" + result.Message);
             }
         }
         #endregion
@@ -137,12 +137,12 @@ namespace Base.UI.ViewModel
             if (!IsConnected)
             {
 
-                CommonMethods.AddSysLog($"PLC未连接", 1);
+                CommonMethods.AddSysLog(1,$"PLC未连接");
                 return;
             }
             device?.DisConnect();
             IsConnected = false;
-            CommonMethods.AddSysLog("PLC断开连接", 1);
+            CommonMethods.AddSysLog(1,"PLC断开连接");
         }
         #endregion
 
@@ -171,7 +171,7 @@ namespace Base.UI.ViewModel
             result = null;
             if (!IsConnected)
             {
-                CommonMethods.AddSysLog("PLC未连接",2);
+                CommonMethods.AddSysLog(2,"PLC未连接");
                 return;
             }
             {
@@ -188,12 +188,12 @@ namespace Base.UI.ViewModel
                             result = StringLib.GetStringFromValueArray(result1.Content);
                             if(IsButton)
                             {
-                                CommonMethods.AddSysLog($"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result1.Content), 0);
+                                CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result1.Content));
                             }
                         }
                         else
                         {
-                            CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:" + result1.Message, 1);
+                            CommonMethods.AddSysLog(1,$"读取{_variable}[{_count}]失败:" + result1.Message);
                         }
 
                         break;
@@ -206,13 +206,13 @@ namespace Base.UI.ViewModel
                             result = StringLib.GetStringFromValueArray(result3.Content);
                             if(IsButton)
                             {
-                                CommonMethods.AddSysLog($"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result3.Content), 0);
+                                CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result3.Content));
 
                             }
                         }
                         else
                         {
-                            CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:" + result3.Message, 1);
+                            CommonMethods.AddSysLog(1,$"读取{_variable}[{_count}]失败:" + result3.Message);
                         }
 
                         break;
@@ -224,12 +224,12 @@ namespace Base.UI.ViewModel
                             result = StringLib.GetStringFromValueArray(result4.Content);
                             if(IsButton)
                             {
-                                CommonMethods.AddSysLog($"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result4.Content), 0);
+                                CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result4.Content));
                             }
                         }
                         else
                         {
-                            CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:" + result4.Message, 1);
+                            CommonMethods.AddSysLog(1,$"读取{_variable}[{_count}]失败:" + result4.Message);
                         }
 
                         break;
@@ -241,13 +241,13 @@ namespace Base.UI.ViewModel
                             result = StringLib.GetStringFromValueArray(result5.Content);
                             if(IsButton)
                             {
-                                CommonMethods.AddSysLog($"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result5.Content), 0);
+                                CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result5.Content));
 
                             }
                         }
                         else
                         {
-                            CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:" + result5.Message, 0);
+                            CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]失败:" + result5.Message);
                         }
                         break;
                     case DataType.UInt:
@@ -258,13 +258,13 @@ namespace Base.UI.ViewModel
                             result= StringLib.GetStringFromValueArray(result6.Content);
                             if(IsButton)
                             {
-                                CommonMethods.AddSysLog($"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result6.Content), 0);
+                                CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result6.Content));
 
                             }
                         }
                         else
                         {
-                            CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:" + result6.Message, 1);
+                            CommonMethods.AddSysLog(1,$"读取{_variable}[{_count}]失败:" + result6.Message);
                         }
                         break;
 
@@ -276,13 +276,13 @@ namespace Base.UI.ViewModel
                             result = StringLib.GetStringFromValueArray(result9.Content);
                             if(IsButton)
                             {
-                                CommonMethods.AddSysLog($"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result9.Content), 0);
+                                CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result9.Content));
 
                             }
                         }
                         else
                         {
-                            CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:" + result9.Message, 1);
+                            CommonMethods.AddSysLog(1,$"读取{_variable}[{_count}]失败:" + result9.Message);
                         }
                         break;
                     case DataType.ULong:
@@ -293,13 +293,13 @@ namespace Base.UI.ViewModel
                             result = StringLib.GetStringFromValueArray(result10.Content);
                             if(IsButton)
                             {
-                                CommonMethods.AddSysLog($"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result10.Content), 0);
+                                CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]成功:" + StringLib.GetStringFromValueArray(result10.Content));
 
                             }
                         }
                         else
                         {
-                            CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:" + result10.Message, 1);
+                            CommonMethods.AddSysLog(1,$"读取{_variable}[{_count}]失败:" + result10.Message);
                         }
                         break;
                     case DataType.String:
@@ -310,17 +310,17 @@ namespace Base.UI.ViewModel
                             result = result11.Content;
                             if(IsButton)
                             {
-                                CommonMethods.AddSysLog($"读取{_variable}[{_count}]成功:" + result11.Content, 0);
+                                CommonMethods.AddSysLog(0,$"读取{_variable}[{_count}]成功:" + result11.Content);
 
                             }
                         }
                         else
                         {
-                            CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:" + result11.Message, 1);
+                            CommonMethods.AddSysLog(1,$"读取{_variable}[{_count}]失败:" + result11.Message);
                         }
                         break;
                     default:
-                        CommonMethods.AddSysLog($"读取{_variable}[{_count}]失败:不支持的数据类型", 1);
+                        CommonMethods.AddSysLog(1,$"读取{_variable}[{_count}]失败:不支持的数据类型");
                         break;
                 }
             }
@@ -385,13 +385,13 @@ namespace Base.UI.ViewModel
             {
                 if(Log)
                 {
-                    CommonMethods.AddSysLog($"[{_Variable}:[{_SetValue}]]写入成功", 0);
+                    CommonMethods.AddSysLog(0,$"[{_Variable}:[{_SetValue}]]写入成功");
 
                 }
             }
             else
             {
-                CommonMethods.AddSysLog($"[{_Variable}:[{_SetValue}]]写入失败", 1);
+                CommonMethods.AddSysLog(1,$"[{_Variable}:[{_SetValue}]]写入失败");
             }
         }
         #endregion
@@ -445,7 +445,7 @@ namespace Base.UI.ViewModel
                                             {
                                                 if (item.CurValue == "1")
                                                 {
-                                                    CommonMethods.AddSysLog($"收到读码触发,当前条码{CommonMethods.CurCode},进行打印", 0);
+                                                    CommonMethods.AddSysLog(0,$"收到读码触发,当前条码{CommonMethods.CurCode},进行打印");
                                                     CommonMethods.PrintAction.Invoke(CommonMethods.CurCode);
                                                     CommonWrite(item.VarAddress, item.DataType, "2");//复位
                                                   

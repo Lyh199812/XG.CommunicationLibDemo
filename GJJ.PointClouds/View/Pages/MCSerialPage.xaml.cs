@@ -11,20 +11,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Base.UI.View.Pages
 {
     /// <summary>
-    /// MonitorPage.xaml 的交互逻辑
+    /// SiemensStoreArea.xaml 的交互逻辑
     /// </summary>
-    public partial class MonitorPage : UserControl
+    public partial class MCSerialPage : UserControl
     {
-        public MonitorPage()
+        public MCSerialPage()
         {
             InitializeComponent();
-            this.DataContext = new MonitorViewModel();
+            this.DataContext = new MCSerialViewModel();
         }
     }
 }

@@ -8,3 +8,13 @@ C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\Base.Com.ABD74C50.Up2Date
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\thinger.CommunicationLib.dll
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\thinger.CommunicationLib.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\thinger.CommunicationLib.dll
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\thinger.CommunicationLib.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\Base.DataConvertLib.dll
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\thinger.S7NetEx.dll
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\bin\Debug\Base.DataConvertLib.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\Base.CommunicationLib.csproj.AssemblyReference.cache
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\Base.CommunicationLib.csproj.CoreCompileInputs.cache
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\Base.Com.ABD74C50.Up2Date
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\thinger.CommunicationLib.dll
+E:\SoftLibs\XG.CommunicationLibDemo\thinger.CommunicationLib\obj\Debug\thinger.CommunicationLib.pdb

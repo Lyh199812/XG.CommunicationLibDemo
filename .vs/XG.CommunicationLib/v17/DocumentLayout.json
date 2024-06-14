@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LYH\\Desktop\\XG.CommunicationLibDemo\\",
+  "WorkspaceRootPath": "E:\\SoftLibs\\XG.CommunicationLibDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|c:\\users\\lyh\\desktop\\xg.communicationlibdemo\\gjj.pointclouds\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|solutionrelative:gjj.pointclouds\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|e:\\softlibs\\xg.communicationlibdemo\\gjj.pointclouds\\viewmodel\\mcserialviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|solutionrelative:gjj.pointclouds\\viewmodel\\mcserialviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|c:\\users\\lyh\\desktop\\xg.communicationlibdemo\\gjj.pointclouds\\viewmodel\\tcpclientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|E:\\SoftLibs\\XG.CommunicationLibDemo\\gjj.pointclouds\\view\\pages\\mcserialpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|solutionrelative:gjj.pointclouds\\view\\pages\\mcserialpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|E:\\SoftLibs\\XG.CommunicationLibDemo\\gjj.pointclouds\\viewmodel\\tcpclientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C07D67A6-A417-4684-820D-EF2CB0E772C1}|GJJ.PointClouds\\Base.UI.csproj|solutionrelative:gjj.pointclouds\\viewmodel\\tcpclientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +30,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\LYH\\Desktop\\XG.CommunicationLibDemo\\GJJ.PointClouds\\ViewModel\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "GJJ.PointClouds\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\LYH\\Desktop\\XG.CommunicationLibDemo\\GJJ.PointClouds\\ViewModel\\MainViewModel.cs",
-              "RelativeToolTip": "GJJ.PointClouds\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACkAAAArAAAA",
+              "DocumentIndex": 2,
+              "Title": "TCPClientViewModel.cs",
+              "DocumentMoniker": "E:\\SoftLibs\\XG.CommunicationLibDemo\\GJJ.PointClouds\\ViewModel\\TCPClientViewModel.cs",
+              "RelativeDocumentMoniker": "GJJ.PointClouds\\ViewModel\\TCPClientViewModel.cs",
+              "ToolTip": "E:\\SoftLibs\\XG.CommunicationLibDemo\\GJJ.PointClouds\\ViewModel\\TCPClientViewModel.cs",
+              "RelativeToolTip": "GJJ.PointClouds\\ViewModel\\TCPClientViewModel.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAjwFMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T08:32:17.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T06:53:27.685Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TCPClientViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\LYH\\Desktop\\XG.CommunicationLibDemo\\GJJ.PointClouds\\ViewModel\\TCPClientViewModel.cs",
-              "RelativeDocumentMoniker": "GJJ.PointClouds\\ViewModel\\TCPClientViewModel.cs",
-              "ToolTip": "C:\\Users\\LYH\\Desktop\\XG.CommunicationLibDemo\\GJJ.PointClouds\\ViewModel\\TCPClientViewModel.cs",
-              "RelativeToolTip": "GJJ.PointClouds\\ViewModel\\TCPClientViewModel.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAkwHoAAAAAAAAA",
+              "Title": "MCSerialPage.xaml",
+              "DocumentMoniker": "E:\\SoftLibs\\XG.CommunicationLibDemo\\GJJ.PointClouds\\View\\Pages\\MCSerialPage.xaml",
+              "RelativeDocumentMoniker": "GJJ.PointClouds\\View\\Pages\\MCSerialPage.xaml",
+              "ToolTip": "E:\\SoftLibs\\XG.CommunicationLibDemo\\GJJ.PointClouds\\View\\Pages\\MCSerialPage.xaml",
+              "RelativeToolTip": "GJJ.PointClouds\\View\\Pages\\MCSerialPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-13T06:03:57.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MCSerialViewModel.cs",
+              "DocumentMoniker": "E:\\SoftLibs\\XG.CommunicationLibDemo\\GJJ.PointClouds\\ViewModel\\MCSerialViewModel.cs",
+              "RelativeDocumentMoniker": "GJJ.PointClouds\\ViewModel\\MCSerialViewModel.cs",
+              "ToolTip": "E:\\SoftLibs\\XG.CommunicationLibDemo\\GJJ.PointClouds\\ViewModel\\MCSerialViewModel.cs",
+              "RelativeToolTip": "GJJ.PointClouds\\ViewModel\\MCSerialViewModel.cs",
+              "ViewState": "AQIAALMAAAAAAAAAAAAIwNQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T08:02:48.719Z",
+              "WhenOpened": "2024-06-13T01:19:28.525Z",
               "EditorCaption": ""
             }
           ]

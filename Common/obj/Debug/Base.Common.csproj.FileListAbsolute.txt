@@ -11,3 +11,16 @@ C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.csproj
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Com.67B953FF.Up2Date
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.dll
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\Common\bin\Debug\Base.Common.dll
+E:\SoftLibs\XG.CommunicationLibDemo\Common\bin\Debug\Base.Common.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\Common\bin\Debug\Base.DataConvertLib.dll
+E:\SoftLibs\XG.CommunicationLibDemo\Common\bin\Debug\Base.WPF.MultiTHMonitorHelper.dll
+E:\SoftLibs\XG.CommunicationLibDemo\Common\bin\Debug\Newtonsoft.Json.dll
+E:\SoftLibs\XG.CommunicationLibDemo\Common\bin\Debug\Base.DataConvertLib.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\Common\bin\Debug\Base.WPF.MultiTHMonitorHelper.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\Common\bin\Debug\Newtonsoft.Json.xml
+E:\SoftLibs\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.csproj.AssemblyReference.cache
+E:\SoftLibs\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.csproj.CoreCompileInputs.cache
+E:\SoftLibs\XG.CommunicationLibDemo\Common\obj\Debug\Base.Com.67B953FF.Up2Date
+E:\SoftLibs\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.dll
+E:\SoftLibs\XG.CommunicationLibDemo\Common\obj\Debug\Base.Common.pdb

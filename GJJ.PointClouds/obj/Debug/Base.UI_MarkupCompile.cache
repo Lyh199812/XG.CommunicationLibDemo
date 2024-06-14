@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.PointClouds\obj\Debug\
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.PointClouds\obj\Debug\
 Base.UI
 none
 false
 DEBUG;TRACE
-C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.PointClouds\App.xaml
-4935433765
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.PointClouds\App.xaml
+4-1824770243
 
-141509550595
-32878468513
-View\MainView.xaml;View\Pages\MonitorPage.xaml;View\Pages\SiemensPage.xaml;View\Pages\TCPClientPage.xaml;
+141427801273
+32-528600224
+View\MainView.xaml;View\Pages\MCSerialPage.xaml;View\Pages\SiemensPage.xaml;View\Pages\TCPClientPage.xaml;
 
 False
 

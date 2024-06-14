@@ -31,21 +31,21 @@ namespace Base.UI.ViewModel
             Menus = new List<MenuModel>();
             Menus.Add(new MenuModel
             {
-                IsSelected = true,
+                IsSelected = false,
                 MenuHeader = "西门子\r\nS7协议",
                 MenuIcon = "\ue620",
-                TargetView = "MonitorPage"
+                TargetView = "SiemensPage"
             });
             Menus.Add(new MenuModel
             {
-                IsSelected = true,
-                MenuHeader = "Modbus\r\nTCP",
+                IsSelected = false,
+                MenuHeader = "三菱串口\r\nMC协议",
                 MenuIcon = "\ue620",
-                TargetView = "MonitorPage"
+                TargetView = "MCSerialPage"
             });
 
             #endregion
-            ShowPage(Menus[0]);
+            ShowPage(Menus[1]);
             SwitchPageCommand= new DelegateCommand<object>(ShowPage);
             //软件版本
             SoftVersion = "V"+CommonMethods.SoftVersion;

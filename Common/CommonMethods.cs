@@ -29,8 +29,6 @@ namespace Base.Common
 
 
 
-        //系统日志添加
-        public static Action<string, int> AddSysLog;
 
 
         public static string SoftVersion {  get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
@@ -41,5 +39,6 @@ namespace Base.Common
         {
             PropertyChanged?.Invoke(null, new PropertyChangedEventArgs(propertyName));
         }
+        public static Action<int,string> AddSysLog { get; set; }
     }
 }

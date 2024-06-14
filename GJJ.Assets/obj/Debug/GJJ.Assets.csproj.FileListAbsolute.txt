@@ -28,3 +28,13 @@ C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.g.r
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.csproj.CoreCompileInputs.cache
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.dll
 C:\Users\LYH\Desktop\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\bin\Debug\Fonts\digital_display.ttf
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\bin\Debug\GJJ.Assets.dll
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\bin\Debug\GJJ.Assets.pdb
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.csproj.AssemblyReference.cache
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\Styles\ButtonStyles.baml
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets_MarkupCompile.cache
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.g.resources
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.csproj.CoreCompileInputs.cache
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.dll
+E:\SoftLibs\XG.CommunicationLibDemo\GJJ.Assets\obj\Debug\GJJ.Assets.pdb

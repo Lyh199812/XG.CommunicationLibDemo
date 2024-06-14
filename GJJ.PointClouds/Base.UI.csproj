@@ -93,14 +93,14 @@
     <Compile Include="ValueConverter\BoolToColorConverter.cs" />
     <Compile Include="ValueConverter\StringToColorConverter.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\MonitorViewModel.cs" />
+    <Compile Include="ViewModel\MCSerialViewModel.cs" />
     <Compile Include="ViewModel\SiemensViewModel.cs" />
     <Compile Include="ViewModel\TCPClientViewModel.cs" />
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\MonitorPage.xaml.cs">
-      <DependentUpon>MonitorPage.xaml</DependentUpon>
+    <Compile Include="View\Pages\MCSerialPage.xaml.cs">
+      <DependentUpon>MCSerialPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\SiemensPage.xaml.cs">
       <DependentUpon>SiemensPage.xaml</DependentUpon>
@@ -141,9 +141,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\MonitorPage.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="View\Pages\MCSerialPage.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\Pages\SiemensPage.xaml">
       <SubType>Designer</SubType>

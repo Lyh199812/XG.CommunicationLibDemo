@@ -54,7 +54,7 @@ namespace Base.UI.ViewModel
 
 
         #region 方法
-        public Action<string, int> AddLog;
+        public Action<int,string> AddLog;
         #region 连接
         public DelegateCommand ConnectionCommand { get; set; }
         public async void Connect()
@@ -65,9 +65,9 @@ namespace Base.UI.ViewModel
         
             try
             {
-                AddLog?.Invoke($"{ServerIPAddress}:{Port} 与服务器连接中.......", 0);
+                AddLog?.Invoke(0,$"{ServerIPAddress}:{Port} 与服务器连接中.......");
                 await socketClient.ConnectAsync(ipe).WithCancellation(cts_conn.Token); ;//WithCancellation
-                AddLog?.Invoke($"{ServerIPAddress}:{Port} 连接成功", 0);
+                AddLog?.Invoke(0,$"{ServerIPAddress}:{Port} 连接成功");
                 IsConnect = true;
                 thrClient = new Thread(ReceiceMeg);
                 thrClient.IsBackground = true;
@@ -75,7 +75,7 @@ namespace Base.UI.ViewModel
             }
             catch (Exception ex)
             {
-                AddLog?.Invoke($"{ServerIPAddress}:{Port} 连接失败" + ex.Message, 1);
+                AddLog?.Invoke(1,$"{ServerIPAddress}:{Port} 连接失败" + ex.Message);
             }
 
         }
@@ -124,7 +124,7 @@ namespace Base.UI.ViewModel
         {
             byte[] arrMsg = Encoding.UTF8.GetBytes( Code);
             socketClient.Send(arrMsg);
-            AddLog?.Invoke($"{ServerIPAddress}:{Port} 发送：{Code}", 0);
+            AddLog?.Invoke(0,$"{ServerIPAddress}:{Port} 发送：{Code}");
             string Msg = "[发送] " + Code + " " + DateTime.Now.ToString() + Environment.NewLine;
             (new Action(() => CommunicationRecord += Msg)).Invoke();
         }

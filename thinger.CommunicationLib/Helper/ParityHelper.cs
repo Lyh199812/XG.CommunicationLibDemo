@@ -1,3 +1,4 @@
+using Base.DataConvertLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,95 +7,196 @@ using System.Threading.Tasks;
 
 namespace Base.CommunicationLib
 {
-    public  class ParityHelper
+    public class ParityHelper
     {
-        private static readonly byte[] crcHigh = {
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
-             0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
-             0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
-             0x00, 0xC1, 0x81, 0x40
-         };
-        private static readonly byte[] crcLow = {
-             0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06, 0x07, 0xC7,
-             0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD, 0x0F, 0xCF, 0xCE, 0x0E,
-             0x0A, 0xCA, 0xCB, 0x0B, 0xC9, 0x09, 0x08, 0xC8, 0xD8, 0x18, 0x19, 0xD9,
-             0x1B, 0xDB, 0xDA, 0x1A, 0x1E, 0xDE, 0xDF, 0x1F, 0xDD, 0x1D, 0x1C, 0xDC,
-             0x14, 0xD4, 0xD5, 0x15, 0xD7, 0x17, 0x16, 0xD6, 0xD2, 0x12, 0x13, 0xD3,
-             0x11, 0xD1, 0xD0, 0x10, 0xF0, 0x30, 0x31, 0xF1, 0x33, 0xF3, 0xF2, 0x32,
-             0x36, 0xF6, 0xF7, 0x37, 0xF5, 0x35, 0x34, 0xF4, 0x3C, 0xFC, 0xFD, 0x3D,
-             0xFF, 0x3F, 0x3E, 0xFE, 0xFA, 0x3A, 0x3B, 0xFB, 0x39, 0xF9, 0xF8, 0x38,
-             0x28, 0xE8, 0xE9, 0x29, 0xEB, 0x2B, 0x2A, 0xEA, 0xEE, 0x2E, 0x2F, 0xEF,
-             0x2D, 0xED, 0xEC, 0x2C, 0xE4, 0x24, 0x25, 0xE5, 0x27, 0xE7, 0xE6, 0x26,
-             0x22, 0xE2, 0xE3, 0x23, 0xE1, 0x21, 0x20, 0xE0, 0xA0, 0x60, 0x61, 0xA1,
-             0x63, 0xA3, 0xA2, 0x62, 0x66, 0xA6, 0xA7, 0x67, 0xA5, 0x65, 0x64, 0xA4,
-             0x6C, 0xAC, 0xAD, 0x6D, 0xAF, 0x6F, 0x6E, 0xAE, 0xAA, 0x6A, 0x6B, 0xAB,
-             0x69, 0xA9, 0xA8, 0x68, 0x78, 0xB8, 0xB9, 0x79, 0xBB, 0x7B, 0x7A, 0xBA,
-             0xBE, 0x7E, 0x7F, 0xBF, 0x7D, 0xBD, 0xBC, 0x7C, 0xB4, 0x74, 0x75, 0xB5,
-             0x77, 0xB7, 0xB6, 0x76, 0x72, 0xB2, 0xB3, 0x73, 0xB1, 0x71, 0x70, 0xB0,
-             0x50, 0x90, 0x91, 0x51, 0x93, 0x53, 0x52, 0x92, 0x96, 0x56, 0x57, 0x97,
-             0x55, 0x95, 0x94, 0x54, 0x9C, 0x5C, 0x5D, 0x9D, 0x5F, 0x9F, 0x9E, 0x5E,
-             0x5A, 0x9A, 0x9B, 0x5B, 0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89,
-             0x4B, 0x8B, 0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C,
-             0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42, 0x43, 0x83,
-             0x41, 0x81, 0x80, 0x40
-         };
+        private static readonly byte[] crcHigh = new byte[256]
+        {
+        0, 193, 129, 64, 1, 192, 128, 65, 1, 192,
+        128, 65, 0, 193, 129, 64, 1, 192, 128, 65,
+        0, 193, 129, 64, 0, 193, 129, 64, 1, 192,
+        128, 65, 1, 192, 128, 65, 0, 193, 129, 64,
+        0, 193, 129, 64, 1, 192, 128, 65, 0, 193,
+        129, 64, 1, 192, 128, 65, 1, 192, 128, 65,
+        0, 193, 129, 64, 1, 192, 128, 65, 0, 193,
+        129, 64, 0, 193, 129, 64, 1, 192, 128, 65,
+        0, 193, 129, 64, 1, 192, 128, 65, 1, 192,
+        128, 65, 0, 193, 129, 64, 0, 193, 129, 64,
+        1, 192, 128, 65, 1, 192, 128, 65, 0, 193,
+        129, 64, 1, 192, 128, 65, 0, 193, 129, 64,
+        0, 193, 129, 64, 1, 192, 128, 65, 1, 192,
+        128, 65, 0, 193, 129, 64, 0, 193, 129, 64,
+        1, 192, 128, 65, 0, 193, 129, 64, 1, 192,
+        128, 65, 1, 192, 128, 65, 0, 193, 129, 64,
+        0, 193, 129, 64, 1, 192, 128, 65, 1, 192,
+        128, 65, 0, 193, 129, 64, 1, 192, 128, 65,
+        0, 193, 129, 64, 0, 193, 129, 64, 1, 192,
+        128, 65, 0, 193, 129, 64, 1, 192, 128, 65,
+        1, 192, 128, 65, 0, 193, 129, 64, 1, 192,
+        128, 65, 0, 193, 129, 64, 0, 193, 129, 64,
+        1, 192, 128, 65, 1, 192, 128, 65, 0, 193,
+        129, 64, 0, 193, 129, 64, 1, 192, 128, 65,
+        0, 193, 129, 64, 1, 192, 128, 65, 1, 192,
+        128, 65, 0, 193, 129, 64
+        };
 
-        /// <summary>
-        /// CRC校验
-        /// </summary>
-        /// <param name="data">字节数组</param>
-        /// <param name="length">验证长度</param>
-        /// <returns>2个字节</returns>
+        private static readonly byte[] crcLow = new byte[256]
+        {
+        0, 192, 193, 1, 195, 3, 2, 194, 198, 6,
+        7, 199, 5, 197, 196, 4, 204, 12, 13, 205,
+        15, 207, 206, 14, 10, 202, 203, 11, 201, 9,
+        8, 200, 216, 24, 25, 217, 27, 219, 218, 26,
+        30, 222, 223, 31, 221, 29, 28, 220, 20, 212,
+        213, 21, 215, 23, 22, 214, 210, 18, 19, 211,
+        17, 209, 208, 16, 240, 48, 49, 241, 51, 243,
+        242, 50, 54, 246, 247, 55, 245, 53, 52, 244,
+        60, 252, 253, 61, 255, 63, 62, 254, 250, 58,
+        59, 251, 57, 249, 248, 56, 40, 232, 233, 41,
+        235, 43, 42, 234, 238, 46, 47, 239, 45, 237,
+        236, 44, 228, 36, 37, 229, 39, 231, 230, 38,
+        34, 226, 227, 35, 225, 33, 32, 224, 160, 96,
+        97, 161, 99, 163, 162, 98, 102, 166, 167, 103,
+        165, 101, 100, 164, 108, 172, 173, 109, 175, 111,
+        110, 174, 170, 106, 107, 171, 105, 169, 168, 104,
+        120, 184, 185, 121, 187, 123, 122, 186, 190, 126,
+        127, 191, 125, 189, 188, 124, 180, 116, 117, 181,
+        119, 183, 182, 118, 114, 178, 179, 115, 177, 113,
+        112, 176, 80, 144, 145, 81, 147, 83, 82, 146,
+        150, 86, 87, 151, 85, 149, 148, 84, 156, 92,
+        93, 157, 95, 159, 158, 94, 90, 154, 155, 91,
+        153, 89, 88, 152, 136, 72, 73, 137, 75, 139,
+        138, 74, 78, 142, 143, 79, 141, 77, 76, 140,
+        68, 132, 133, 69, 135, 71, 70, 134, 130, 66,
+        67, 131, 65, 129, 128, 64
+        };
+
         public static byte[] CalculateCRC(byte[] data, int length)
         {
-            int i = 0;
-            byte[] res = new byte[2] { 0xFF, 0xFF };
-            ushort iIndex;
+            int num = 0;
+            byte[] array = new byte[2] { 255, 255 };
             while (length-- > 0)
             {
-                iIndex = (ushort)(res[0] ^ data[i++]);
-                res[0] = (byte)(res[1] ^ crcHigh[iIndex]);
-                res[1] = crcLow[iIndex];
+                ushort num2 = (ushort)(array[0] ^ data[num++]);
+                array[0] = (byte)(array[1] ^ crcHigh[num2]);
+                array[1] = crcLow[num2];
             }
-            return res;
+
+            return array;
         }
 
-        /// <summary>
-        /// 验证校验
-        /// </summary>
-        /// <param name="data">待验证报文</param>
-        /// <returns>是否正确</returns>
         public static bool CheckCRC(byte[] data)
         {
-            if (data == null) return false;
+            if (data == null)
+            {
+                return false;
+            }
 
-            if (data.Length <= 2) return false;
+            if (data.Length <= 2)
+            {
+                return false;
+            }
 
-            int length = data.Length;
-            byte[] buf = new byte[length - 2];
-            Array.Copy(data, 0, buf, 0, buf.Length);
-
-            byte[] CRCbuf = CalculateCRC(buf, buf.Length);
-            return CRCbuf[0] == data[length - 2] && CRCbuf[1] == data[length - 1];
+            int num = data.Length;
+            byte[] array = new byte[num - 2];
+            Array.Copy(data, 0, array, 0, array.Length);
+            byte[] array2 = CalculateCRC(array, array.Length);
+            return array2[0] == data[num - 2] && array2[1] == data[num - 1];
         }
 
+        public static byte[] CaculateLRC(byte[] data, int start = 0, int len = 0)
+        {
+            if (data == null || data.Length == 0)
+            {
+                return null;
+            }
+
+            if (start < 0)
+            {
+                return null;
+            }
+
+            if (len == 0)
+            {
+                len = data.Length - start;
+            }
+
+            int num = start + len;
+            if (num > data.Length)
+            {
+                return null;
+            }
+
+            byte b = 0;
+            for (int i = start; i < num; i++)
+            {
+                b += data[i];
+            }
+
+            b = (byte)((b ^ 0xFF) + 1);
+            return new byte[1] { b };
+        }
+
+        public static bool CheckLRC(byte[] data)
+        {
+            if (data == null)
+            {
+                return false;
+            }
+
+            if (data.Length <= 1)
+            {
+                return false;
+            }
+
+            int num = data.Length;
+            byte[] array = new byte[num - 1];
+            Array.Copy(data, 0, array, 0, array.Length);
+            byte[] array2 = CaculateLRC(array, 0, array.Length);
+            return array2[0] == data[num - 1];
+        }
+
+        public static byte[] CalculateSUM(byte[] data)
+        {
+            int num = 0;
+            for (int i = 1; i < data.Length; i++)
+            {
+                num += data[i];
+            }
+
+            return ByteArrayLib.GetAsciiByteArrayFromValue((byte)num);
+        }
+
+        public static bool CheckSUM(byte[] data)
+        {
+            if (data.Length <= 2)
+            {
+                return false;
+            }
+
+            byte[] value = CalculateSUM(ByteArrayLib.GetByteArrayFromByteArray(data, 0, data.Length - 2));
+            return ByteArrayLib.GetByteArrayEquals(value, ByteArrayLib.GetByteArrayFromByteArray(data, data.Length - 2, 2));
+        }
+
+        public static string CalculateACC(string data)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(data);
+            int num = 0;
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                num += bytes[i];
+            }
+
+            return data + num.ToString("X4").Substring(2);
+        }
+
+        public static byte FCS(byte[] data)
+        {
+            int num = data[0];
+            for (int i = 1; i < data.Length; i++)
+            {
+                num ^= data[i];
+            }
+
+            return (byte)num;
+        }
     }
 }
